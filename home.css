@@ -1,0 +1,31 @@
+
+ul{
+margin: 0;
+list-style-type: none;
+padding: 0;
+}
+li{
+display: inline;
+float: left;
+}
+li a{
+padding: 20px;
+background-color:blue;
+font-size: 30px;
+color: white;
+margin:0;
+
+}
+li a:hover{
+background-color: white;
+color: blue;
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: darkorange;
+    height: 100px;
+    width: 500px;
+    margin:200px auto;
+}
