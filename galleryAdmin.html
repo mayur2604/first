@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Gallery Admin</title>
+        <link href="commonStyle.css" rel="stylesheet" type="text/css"/>
+    <style>
+    h1{
+        text-align:center;
+        color:aquamarine;
+        width:600px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    
+    #myForm{
+        display:none;
+    }
+    form{
+        width:600px;
+        text-align: center;
+        margin: 5px auto;
+    }
+    </style>
+    <script src="modifyGallery.js"></script>
+</head>
+    <body>
+        <ul>
+
+            <li><a href="home.html">Home</a></li>
+           <li><a href="aboutme.html">About Me</a></li>
+           <li><a href="contactme.html">Contact Me</a></li>
+           <li> <a href="gallery.html">Gallery</a></li>
+           <li> <a href="galleryAdmin.html">Gallery Admin</a></li>
+           </ul>
+           <br><br>
+<h1>GALLERY ADMIN</h1>
+
+    <form  name="myform" onsubmit="return validate()" action="gallery.html" method="GET">
+        Operation to perform
+        <select name="op" required>
+            <option value="add">add</option>
+            <option value="remove">remove</option>
+            <option value="update">update</option>
+            </select><br>
+URL:<input name="url" ><br>
+Name:<input name="name" ><br>
+URL2:<input name="url2" ><br>
+Date:<input name="date" type="date"><br>
+Info:<textarea name="info" height="200px" width="200px"></textarea>
+<input type="submit" value="submit">
+    </form>
+
+    </body>
+</html>

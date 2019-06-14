@@ -1,55 +1,33 @@
+<!DOCTYPE html>
 <html>
 <head>
+                <meta charset="utf-8"/>
 <title>Gallery</title>
 <style>
-       ul{
-        margin: 0;
-        list-style-type: none;
-     padding: 0;
-     }
-    li{
-    display: inline;
-    float: left;
-    }
-    li a{
-    padding: 20px;
-    background-color:blue;
-    font-size: 30px;
-    color: white;
-    margin:0;
-    }
-    li a:hover{
-    background-color: white;
-    color: blue;
-    }
-h1{
-color: blue;
-opacity: 0.75;
-text-align:center;
-margin: 10px auto;
-font-family: cursive;
-}
-img{
-text-align:center;
-margin:  auto;
-padding: 10px;
-position: relative;
-top: 200px;
-left: 780px;
-}
+    
 </style>
+       <link href="commonStyle.css" rel="stylesheet" type="text/css">
+<link href="galleryStyle.css" rel="stylesheet" type="text/css">
+<script  type = "text/javascript"  src="loadpic.js">
+//console.log("hh");
+</script>
+
 </head>
-<body>
+<body onload="myFunction()">
         <ul>
 
                 <li><a href="home.html">Home</a></li>
                <li><a href="aboutme.html">About Me</a></li>
                <li><a href="contactme.html">Contact Me</a></li>
                <li> <a href="gallery.html">Gallery</a></li>
+               <li> <a href="galleryAdmin.html">Gallery Admin</a></li>
                </ul>
                <br><br>
 <h1>My gallery</h1>
-<img src="mayur.jpg" alt="mayur" height=300 width=300>
 
+<div id="pic"></div>
+<br>
+<div>
+</div>
 </body>
 </html>
