@@ -1,4 +1,4 @@
-var data='{"imginfo":[{"img":"mayur.jpg","name":"mayur"}]}';
+var data='{"imginfo":[{"img":"mayur.jpg","name":"mayur","date":"14-06-2019","info":"image"}]}';
 function myFunction(){
 
 var x=window.location.search;
@@ -8,6 +8,8 @@ var pic=JSON.parse(data);
      pic=JSON.parse(pic);
     console.log(typeof pic);
  } 
+ else
+ localStorage.setItem("pic",data);
 if(x!=""){
 x=x.substring(1);
 var arr=x.split("&");
@@ -17,24 +19,26 @@ var url=arr[1].split("=");
 console.log(op);
 var name=arr[2].split("=");
 var url2=arr[3].split("=");
+var date=arr[4].split("=");
+var info=arr[5].split("=");
 if(op[1]=="add")
 {
-add(url,name);
+add(url,name,date,info);
 }
 else if(op[1]=="remove")
 remove(url,name);
-else update(url,name,url2);
+else update(url,name,url2,date,info);
 }
 
 else{
 display(pic);
 }
 }
-function add(url,name){
+function add(url,name,date,info){
 
     var pic=JSON.parse(localStorage.getItem("pic"));
     if(url[1]!=""){
-    pic.imginfo.push({"img":url[1],"name":name[1]});
+    pic.imginfo.push({"img":url[1],"name":name[1],"date":date[1],"info":info[1]});
 
 console.log(data);
     console.log(pic.imginfo[1].img);
@@ -57,7 +61,7 @@ function remove(url,name){
     display(JSON.parse(pic));
     
 }
-function update(url,name,url2){
+function update(url,name,url2,date,info){
     var pic=JSON.parse(localStorage.getItem("pic"));
   
     for(var i=0;i<pic.imginfo.length;i++)
@@ -65,6 +69,8 @@ function update(url,name,url2){
         if(pic.imginfo[i].img==url[1]){
             pic.imginfo[i].img=url2[1];
             pic.imginfo[i].name=name[1];
+            pic.imginfo[i].date=date[1];
+            pic.imginfo[i].info=info[1];
             console.log(url2[1]);
         }
     }
